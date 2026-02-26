@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {HERO_MAIN} from '../hero.data';
 
 @Component({
   selector: 'app-hero-main',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './hero-main.css',
 })
 export class HeroMain {
-  heroMainImageUrl : string = "/assets/features/home/hero/hero-main/hero-main-card.png"
+  @Input() data! : { // ! is there to keep it from complaining about the data not being initialized, since it will be passed in from the parent component
+    title : string,
+    subtitle : string,
+    buttonText : string,
+    imageUrl : string
+  }
+  fun(){
+    return "hi"
+  }
 }

@@ -1,12 +1,17 @@
-<div class = "mx-[3.12vw] w-[clamp(380px, 75vw,1440px)] h-auto grid grid-cols-3 gap-6">
-  <div class = "col-span-2 row-span-2">
-    <app-hero-main></app-hero-main>
-  </div>
-  <div class = "bg-blue-100 h-[380px] w-[352px] manrope rounded-2xl">
-
-  </div>
-  <div class = "bg-yellow-100 h-[380px] w-[352px] rounded-2xl">
-    
+<div class="mx-auto [calc(100vw-20px)] md:w-[clamp(380px,75vw,1440px)] md:flex gap-2.5 items-center justify-center my-2">
+  <div class="">
+    <app-hero-main
+      [data]="Main"
+    >
+    </app-hero-main>
   </div>
 
+  <div class="flex md:flex-col gap-2.5 my-2 items-center overflow-x-scroll md:overflow-y-scroll px-[10px] md:px-0  md:h-[clamp(650px,40vw,1440px)]">
+    @for(items of Cards; track items.id){
+      <app-hero-features
+        [title]="items.title"
+        [imageUrl]="items.imageUrl">
+      </app-hero-features>
+    }
+  </div>
 </div>

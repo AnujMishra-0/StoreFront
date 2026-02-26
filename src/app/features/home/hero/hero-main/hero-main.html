@@ -1,15 +1,28 @@
-
-
-<div  class = "rounded-4xl h-[40vw] w-[50vw]" [style.background-image]="heroMainImageUrl" ]>
-  <div class = "flex flex-col gap-[1.04vw] w-[17vw] h-[19.5vw] ml-[3.12vw] pt-[3.12vw]">
-    <p class = "font-inter text-[4.68vw] ">
-      Color of Summer Outfit
+<div
+  class="rounded-modular h-[clamp(650px,40vw,1440px)] mx-auto w-[calc(100vw-20px)] md:w-[clamp(380px,50vw,1440px)] overflow-hidden bg-cover bg-center"
+  [style.background-image]="`url(${data.imageUrl})`"
+>
+  <div
+    class="flex flex-col gap-[16px] md:gap-[1.04vw] w-[50vw] md:w-[20vw] pl-[24px] md:pl-[3.12vw] pt-[24px] md:pt-[3.12vw]"
+  >
+    <p class="font-inter text-white text-[56px] md:text-[4.68vw] leading-[90%]">
+      {{ data.title }}
     </p>
-    <p class = "font-inter text-[0.7vw]">
-      100+ Collections for your outfit <br> inspirations in this summer
+
+    <p
+      class="font-inter text-black/60 font-bold text-[16px] md:text-[0.8vw] px-[8px] md:px-[0.5vw] leading-[144%]"
+    >
+      {{ data.subtitle }}
     </p>
-    <button class = "w-[14vw] h-[2.6vw] bg-black rounded-4xl text-[0.7vw] items-center justify-center">
-      <span class = "px-[2.89vw] py-[0.6vw] text-white font-inter ">SHOW COLLECTIONS</span>
+
+    <button
+      class="w-[70vw] md:w-[14vw] h-[48px] md:h-[2.60vw] bg-black rounded-4xl text-[14px] md:text-[0.7vw] cursor-pointer"
+    >
+      <span class="px-[20px] py-[10px] md:px-[2.89vw] md:py-[0.6vw] text-white font-inter hover:animate-bounce">
+        {{ data.buttonText }}
+      </span>
     </button>
   </div>
 </div>
+
+<img src="" alt="">

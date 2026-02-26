@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+.font-inter {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.rounded-modular{
+ @apply rounded-[clamp(24px,2.08vw,40px)];
+}
+
