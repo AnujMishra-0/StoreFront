@@ -1,0 +1,19 @@
+<div class="w-[16.20vw] flex flex-col gap-[1vw]">
+  <div class="font-inter text-[3.38vw] leading-[100%] tracking-[-6%]">
+    {{ data.title }}
+  </div>
+  <div class="font-inter text-[1.25vw] leading-[26px] text-[#121212]/80">
+    {{ data.description }}
+  </div>
+
+  <button
+    [routerLink]="data.buttonTargetUrl"
+    class="w-[min(280px,50vw)] md:w-[14vw] h-[48px] md:h-[2.60vw] bg-white rounded-4xl text-[14px] md:text-[0.7vw] cursor-pointer border-2"
+  >
+    <span
+      class="px-[20px] py-[10px] md:px-[2.89vw] md:py-[0.6vw] text-black font-inter hover:animate-bounce"
+    >
+      {{ data.buttonText }}
+    </span>
+  </button>
+</div>

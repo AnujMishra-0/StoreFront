@@ -1,0 +1,20 @@
+<div
+  class="rounded-modular bg-cover aspect-[48/38] w-[375px] md:w-[25vw] justify-end bg-black flex flex-col"
+  [style.background-image]="`url(${card().imageUrl})`"
+>
+  <div class="flex items-center justify-between p-2 md:px-[1.56vw] pb-[clamp(20px,1.56vw,30px)]">
+    <span
+      [class]="card().isBgDark ? 'text-white' : 'text-black font-bold'"
+      class="font-inter text-[30px] md:text-[2.08vw] leading-[100%]"
+    >
+      {{ card().title }}
+    </span>
+    <a [href]="card().targetUrl" class="cursor-pointer">
+      <img
+        src="assets/shared/top-right-white-arrow.svg"
+        alt="top-right-white-arrow"
+        class="h-[30px] w-auto md:w-[1.56vw] md:h-[1.56vw]"
+      />
+    </a>
+  </div>
+</div>

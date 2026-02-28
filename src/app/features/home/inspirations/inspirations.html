@@ -1,0 +1,14 @@
+<div class = "mx-auto my-2  h-auto md:w-[clamp(380px,75vw,1440px)] flex flex-col md:flex-row justify-center gap-10 " >
+
+  <app-inspiration-header class="flex flex-col my-auto"></app-inspiration-header>
+
+  <div class = "flex gap-[1.56vw]  overflow-x-auto scrollbar-hidden">
+    @for(item of cards; track item.id) {
+      <app-inspiration-card
+        [card]="item"
+      ></app-inspiration-card>
+    }
+  </div>
+
+</div>
+

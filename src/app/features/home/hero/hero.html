@@ -1,17 +1,15 @@
-<div class="mx-auto [calc(100vw-20px)] md:w-[clamp(380px,75vw,1440px)] md:flex gap-2.5 items-center justify-center my-2">
+<div
+  class="mx-auto md:w-[clamp(380px,75vw,1440px)] md:flex gap-2.5 items-center justify-center my-2"
+>
   <div class="">
-    <app-hero-main
-      [data]="Main"
-    >
-    </app-hero-main>
+    <app-hero-main [data]="Main"> </app-hero-main>
   </div>
 
-  <div class="flex md:flex-col gap-2.5 my-2 items-center overflow-x-scroll md:overflow-y-scroll px-[10px] md:px-0  md:h-[clamp(650px,40vw,1440px)]">
-    @for(items of Cards; track items.id){
-      <app-hero-features
-        [title]="items.title"
-        [imageUrl]="items.imageUrl">
-      </app-hero-features>
+  <div
+    class="flex md:flex-col gap-2.5 my-2 items-center overflow-x-scroll md:overflow-y-scroll px-[10px] md:px-0 md:h-[clamp(650px,40vw,1440px)] scrollbar-hidden"
+  >
+    @for (items of Cards; track items.id) {
+      <app-hero-features [title]="items.title" [imageUrl]="items.imageUrl"> </app-hero-features>
     }
   </div>
 </div>
