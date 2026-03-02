@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { INSPIRATION_HEADER } from '../../inspirations.data';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { InspirationHeaderEntity } from '../../entity/inspirations.entity';
 
 @Component({
   selector: 'app-inspiration-header',
@@ -9,5 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './inspiration-header.css',
 })
 export class InspirationHeader {
-  data = INSPIRATION_HEADER;
+  header = input.required<InspirationHeaderEntity>();
 }

@@ -1,0 +1,22 @@
+@let p = product();
+
+<div class="w-full">
+  <div class="w-full relative aspect-square rounded-modular overflow-hidden">
+    <img [ngSrc]="p.productImageUrl" [alt]="p.name" fill class="object-cover " />
+
+    <img
+      ngSrc="assets/shared/not-wishlist-icon.svg"  alt="not wishlisted"  width="40"
+      height="40" class="absolute top-[20px] right-[20px]"
+    />
+  </div>
+
+  <div class="py-[24px] flex flex-col gap-[4px] font-inter">
+    <span class="text-[clamp(18px,1.66vw,24px)] text-[#121212]">
+      {{ p.name }}
+    </span>
+
+    <span class="text-[clamp(16px,1.36vw,20px)] text-[#121212]/80">
+      {{ p.price }}
+    </span>
+  </div>
+</div>

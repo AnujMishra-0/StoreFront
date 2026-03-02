@@ -10,5 +10,5 @@ import { NgClass, NgOptimizedImage } from '@angular/common';
 })
 export class InspirationCard {
   // @Input() card!: Omit<InspirationCardEntity, 'id'>; backward compatibility only
-  card = input.required<Omit<InspirationCardEntity, 'id'>>();
+  card = input.required<InspirationCardEntity>();
 }

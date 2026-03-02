@@ -1,15 +1,17 @@
+@let c = card();
 <div
+
   class="rounded-modular bg-cover aspect-[48/38] w-[375px] md:w-[25vw] justify-end bg-black flex flex-col"
-  [style.background-image]="`url(${card().imageUrl})`"
+  [style.background-image]="`url(${c.imageUrl})`"
 >
   <div class="flex items-center justify-between p-2 md:px-[1.56vw] pb-[clamp(20px,1.56vw,30px)]">
     <span
-      [class]="card().isBgDark ? 'text-white' : 'text-black font-bold'"
-      class="font-inter text-[30px] md:text-[2.08vw] leading-[100%]"
+      [class]="c.isBgDark ? 'text-white' : 'text-black font-bold'"
+      class="font-inter text-[31px] md:text-[2.08vw] leading-[100%]"
     >
-      {{ card().title }}
+      {{ c.title }}
     </span>
-    <a [href]="card().targetUrl" class="cursor-pointer">
+    <a [href]="c.targetUrl" class="cursor-pointer">
       <img
         src="assets/shared/top-right-white-arrow.svg"
         alt="top-right-white-arrow"
