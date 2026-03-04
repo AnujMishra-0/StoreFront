@@ -1,8 +1,11 @@
 @let p = product();
-
+@let asp = aspect();
 <div class="w-full">
-  <div class="w-full relative aspect-square rounded-modular overflow-hidden">
-    <img [ngSrc]="p.productImageUrl" [alt]="p.name" fill class="object-cover " />
+  <div class="relative w-full h-fit rounded-modular overflow-hidden">
+    <img [src]="p.productImageUrl" [alt]="p.name" fill
+         [class]="asp === 'video' ? 'aspect-video' : 'aspect-square'"
+         class="object-cover w-full h-[clamp(168px,22vw,375px)]"
+    />
 
     <img
       ngSrc="assets/shared/not-wishlist-icon.svg"  alt="not wishlisted"  width="40"
@@ -10,7 +13,7 @@
     />
   </div>
 
-  <div class="py-[24px] flex flex-col gap-[4px] font-inter">
+  <div class="md:py-[20px] flex flex-col gap-[4px] font-inter">
     <span class="text-[clamp(18px,1.66vw,24px)] text-[#121212]">
       {{ p.name }}
     </span>
