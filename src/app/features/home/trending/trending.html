@@ -1,11 +1,14 @@
-<div class="grid grid-cols-2 md:grid-cols-4 gap-[20px]  width-margin-20px mx-auto">
-  @for (item of data; track item.product.id) {
 
-    <app-product-card
-      [product]="item.product"
-      [aspect]="item.aspect"
-      class="overflow-hidden"
-      [class.col-span-2]="item.aspect === 'video'"
-    />
-  }
+
+<div>
+
 </div>
+<app-product-card
+  [product]="{
+        id:1,
+        name:'Running Shoe',
+        price:225,
+        productImageUrl:'https://picsum.photos/200',
+        isWishlisted : false
+        }"
+></app-product-card>

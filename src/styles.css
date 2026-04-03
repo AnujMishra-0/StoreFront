@@ -9,10 +9,6 @@
  @apply rounded-[clamp(24px,2.08vw,40px)];
 }
 
-.width-margin-20px{
-  @apply w-[calc(100dvw-20px)] md:max-w-[1440px]
-}
-
 @layer utilities {
   .scrollbar-hidden {
     -ms-overflow-style: none;  /* IE and Edge */

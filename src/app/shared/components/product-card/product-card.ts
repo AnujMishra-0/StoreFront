@@ -10,5 +10,4 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class ProductCardComponent {
   product = input.required<ProductCard>();
-  aspect = input<'square' | 'video'>();
 }
